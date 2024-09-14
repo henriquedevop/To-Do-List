@@ -1,0 +1,133 @@
+body {
+    background: url(../img/background.png);
+    background-repeat: no-repeat;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    background-color: #d1d1d1;
+    width: 500px;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 8em auto 0 ;
+}
+
+#error-msg {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #003329;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+#input-task {
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    outline: none;
+    padding-left: 1em;
+    font-size: 1em;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+}
+
+
+#button-add-task {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #003329;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0 .8em;
+    float: right;
+}
+
+#button-add-task:hover {
+    opacity: .9;
+}
+
+#button-add-task:active {
+    opacity: .7;
+}
+
+#list-tasks {
+    width: 100%;
+    margin-top: 2em;
+    border-radius: 5px;
+}
+
+.task p {
+    word-wrap: break-word; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    max-width: 100%;
+}
+
+.task {
+    background-color: white;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    padding-inline: 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+img {
+    height: 1.7em;
+    opacity: 0;
+    transition: opacity .2s ease-in-out ;
+    cursor: pointer;
+}
+
+#done {
+    background-color: #8fac55;
+    text-decoration: line-through;
+}
+
+.task:hover {
+    img {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+        background: url(../img/background.png) no-repeat center center fixed; /* Centraliza a imagem e a fixa */
+        background-size: cover; /* Garante que a imagem cubra todo o espaço do body */
+        margin: 0; /* Remove qualquer margem do body */
+        padding: 0; /* Remove qualquer padding do body */
+        overflow-x: hidden; /* Remove o scroll horizontal, se houver */
+    }
+    
+    
+    .container {
+        width: 90%; /* Ajusta o container para caber melhor em telas menores */
+        margin: 4em auto 0;
+    }
+
+    #input-task {
+        width: 100%; /* Faz o input ocupar a largura total do container no mobile */
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #button-add-task {
+        width: 100%; /* Faz o botão de adicionar tarefa ocupar a largura total no mobile */
+        margin-top: 1em; /* Espaçamento para não ficar colado ao input */
+        float: none; /* Remove o float no mobile */
+    }
+
+    img {
+        opacity: 1;
+    }
+}
